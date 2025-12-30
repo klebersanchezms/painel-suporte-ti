@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ativos de TI</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">Suporte TI</div>
+  <div class="top-actions">
+    <a href="dashboard.html" class="btn secondary small-btn">Voltar</a>
+    <button id="btnLogout" class="btn secondary">Sair</button>
+  </div>
+</header>
+
+<main class="container">
+
+  <h2>Ativos de TI</h2>
+
+  <div class="card">
+    <h3>Novo Ativo</h3>
+    <form id="ativoForm">
+      <input id="tipo" placeholder="Tipo" required />
+      <input id="fabricante" placeholder="Fabricante" />
+      <input id="modelo" placeholder="Modelo" />
+      <input id="serial" placeholder="Patrimônio / Serial" />
+      <input id="ip" placeholder="IP" />
+      <input id="hostname" placeholder="Hostname" />
+      <input id="setor" placeholder="Setor" />
+      <input id="responsavel" placeholder="Responsável" />
+      <input id="obs" placeholder="Observações" />
+      <button class="btn">Salvar</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h3>Ativos Cadastrados</h3>
+    <div id="listaAtivos"></div>
+  </div>
+
+</main>
+
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/ativos.js"></script>
+
+</body>
+</html>
