@@ -48,9 +48,13 @@
       <h2>Dashboard</h2>
 
       <div class="grid">
+
         <div class="card">
           <div class="muted">Ativos</div>
           <strong id="kpiAtivos">0</strong>
+          <button id="btnAtivos" class="btn secondary" style="margin-top:12px">
+            Gerenciar Ativos
+          </button>
         </div>
 
         <div class="card">
@@ -62,15 +66,50 @@
           <div class="muted">Vencimentos</div>
           <strong id="kpiVenc">0</strong>
         </div>
+
       </div>
+
+    </section>
+
+    <!-- ATIVOS DE TI -->
+    <section id="ativosView" class="hidden">
+
+      <h2>Ativos de TI</h2>
+
+      <div class="card">
+        <h3>Novo Ativo</h3>
+
+        <form id="ativoForm">
+          <input id="tipo" placeholder="Tipo (Notebook, PC, Impressora)" required />
+          <input id="fabricante" placeholder="Fabricante" />
+          <input id="modelo" placeholder="Modelo" />
+          <input id="serial" placeholder="Patrimônio / Serial" />
+          <input id="ip" placeholder="IP" />
+          <input id="hostname" placeholder="Hostname" />
+          <input id="setor" placeholder="Setor" />
+          <input id="responsavel" placeholder="Responsável" />
+          <input id="obs" placeholder="Observações" />
+
+          <button class="btn">Salvar Ativo</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Ativos Cadastrados</h3>
+        <div id="listaAtivos"></div>
+      </div>
+
+      <button id="btnVoltarDashboard" class="btn secondary">
+        Voltar ao Dashboard
+      </button>
 
     </section>
 
   </main>
 
-  <!-- RODAPÉ COM VERSÃO -->
+  <!-- RODAPÉ -->
   <footer class="footer">
-    Sistema de Suporte de TI • Versão <strong>v1.0.0</strong>
+    Sistema de Suporte de TI • Versão <strong>v1.1.0</strong>
   </footer>
 
   <!-- MODAL SOBRE -->
@@ -80,7 +119,7 @@
 
       <p>
         <strong>Sistema:</strong> Painel de Suporte de TI<br>
-        <strong>Versão:</strong> v1.0.0
+        <strong>Versão:</strong> v1.1.0
       </p>
 
       <p class="muted">
@@ -89,50 +128,50 @@
       </p>
 
       <p class="muted small">
-  <strong>Desenvolvedor:</strong><br>
-  Kleber Sanchez
-</p>
+        <strong>Desenvolvedor:</strong><br>
+        Kleber Sanchez
+      </p>
 
-<p class="muted small">
-  <strong>Contato:</strong><br>
+      <p class="muted small">
+        <strong>Contato:</strong><br>
 
-  📱
-  <a
-    href="https://wa.me/5516994136309"
-    target="_blank"
-    class="contact-link"
-  >
-    WhatsApp: (16) 99413-6309
-  </a>
-  <br>
+        📱
+        <a
+          href="https://wa.me/5516994136309"
+          target="_blank"
+          class="contact-link"
+        >
+          WhatsApp: (16) 99413-6309
+        </a>
+        <br>
 
-  ✉️
-  <a
-    href="mailto:suporte.ti@manutexcnc.com.br"
-    class="contact-link"
-  >
-    suporte.ti@manutexcnc.com.br
-  </a>
-  <br>
+        ✉️
+        <a
+          href="mailto:suporte.ti@manutexcnc.com.br"
+          class="contact-link"
+        >
+          suporte.ti@manutexcnc.com.br
+        </a>
+        <br>
 
-  ✉️
-  <a
-    href="mailto:kleber@sanchezeti.br"
-    class="contact-link"
-  >
-    kleber@sanchezeti.br
-  </a>
-</p>
+        ✉️
+        <a
+          href="mailto:kleber@sanchezeti.br"
+          class="contact-link"
+        >
+          kleber@sanchezeti.br
+        </a>
+      </p>
 
-<hr style="border:0;border-top:1px solid #1e293b;margin:12px 0">
+      <hr style="border:0;border-top:1px solid #1e293b;margin:12px 0">
 
-<p class="muted small">
-  <strong>Tecnologias utilizadas:</strong><br>
-  • HTML, CSS e JavaScript<br>
-  • Firebase Authentication<br>
-  • Firestore Database<br>
-  • GitHub Pages
-</p>
+      <p class="muted small">
+        <strong>Tecnologias utilizadas:</strong><br>
+        • HTML, CSS e JavaScript<br>
+        • Firebase Authentication<br>
+        • Firestore Database<br>
+        • GitHub Pages
+      </p>
 
       <button id="btnCloseAbout" class="btn">Fechar</button>
     </div>
@@ -145,4 +184,3 @@
 
 </body>
 </html>
-
