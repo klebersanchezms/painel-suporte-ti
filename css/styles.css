@@ -223,13 +223,16 @@ input:focus {
 
 /* LINKS DE CONTATO NO SOBRE */
 .contact-link {
-  color: var(--primary);
+  color: #7dd3fc; /* azul claro com alto contraste */
   text-decoration: none;
   font-weight: 500;
 }
 
 .contact-link:hover {
   text-decoration: underline;
+  color: #bae6fd;
 }
+
+
 
 
