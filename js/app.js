@@ -14,3 +14,17 @@ async function carregarKPIs() {
   }
 }
 carregarKPIs();
+
+// MODAL SOBRE
+const btnAbout = document.getElementById("btnAbout");
+const aboutModal = document.getElementById("aboutModal");
+const btnCloseAbout = document.getElementById("btnCloseAbout");
+
+btnAbout.onclick = () => {
+  aboutModal.classList.remove("hidden");
+};
+
+btnCloseAbout.onclick = () => {
+  aboutModal.classList.add("hidden");
+};
+
