@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Painel Suporte TI</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- TOPO -->
+  <header class="topbar">
+    <div class="brand">Suporte TI</div>
+    <div>
+      <span id="userEmail"></span>
+      <button id="btnLogout" class="btn secondary hidden">Sair</button>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="container">
+
+    <!-- LOGIN -->
+    <section id="loginView" class="card login-card">
+
+      <!-- ÍCONE / LOGO -->
+      <div class="login-logo">
+        🛠️
+      </div>
+
+      <h2>Suporte TI</h2>
+      <p class="muted">Acesse o painel de controle</p>
+
+      <form id="loginForm">
+        <input
+          id="email"
+          type="email"
+          placeholder="E-mail"
+          required
+        />
+
+        <input
+          id="password"
+          type="password"
+          placeholder="Senha"
+          required
+        />
+
+        <button class="btn" type="submit">
+          Entrar
+        </button>
+      </form>
+
+      <button
+        id="btnCreateUser"
+        class="btn secondary"
+        style="margin-top:12px"
+      >
+        Criar usuário
+      </button>
+
+      <p id="loginMsg" class="muted small"></p>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section id="appView" class="hidden">
+
+      <h2>Dashboard</h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <div class="muted">Ativos</div>
+          <strong id="kpiAtivos">0</strong>
+        </div>
+
+        <div class="card">
+          <div class="muted">Usuários</div>
+          <strong id="kpiUsuarios">0</strong>
+        </div>
+
+        <div class="card">
+          <div class="muted">Vencimentos</div>
+          <strong id="kpiVenc">0</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- SCRIPTS -->
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
