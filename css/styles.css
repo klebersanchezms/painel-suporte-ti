@@ -221,3 +221,15 @@ input:focus {
   display: none;
 }
 
+/* LINKS DE CONTATO NO SOBRE */
+.contact-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+
