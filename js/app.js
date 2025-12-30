@@ -43,5 +43,9 @@ document.addEventListener("keydown", (e) => {
     aboutModal.classList.add("hidden");
   }
 });
+.modal.hidden {
+  display: none;
+}
+
 
 
