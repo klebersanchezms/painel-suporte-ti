@@ -65,11 +65,13 @@ body::before {
 }
 
 /* LOGIN */
-.login-card {
-  max-width: 420px;
-  margin: 0 auto;
-  text-align: center;
-  backdrop-filter: blur(14px);
+.card {
+  background: rgba(2, 6, 23, 0.85);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  margin-bottom: 24px;
 }
 
 /* LOGO */
@@ -232,6 +234,7 @@ input:focus {
   text-decoration: underline;
   color: #bae6fd;
 }
+
 
 
 
