@@ -174,3 +174,46 @@ input:focus {
     gap: 10px;
   }
 }
+
+/* BOTÃO PEQUENO NO TOPO */
+.small-btn {
+  padding: 6px 10px;
+  font-size: 12px;
+  width: auto;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* RODAPÉ */
+.footer {
+  text-align: center;
+  padding: 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #020617;
+  padding: 24px;
+  border-radius: 16px;
+  max-width: 420px;
+  width: 90%;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 40px rgba(0,0,0,.6);
+}
+
