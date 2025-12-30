@@ -15,16 +15,33 @@ async function carregarKPIs() {
 }
 carregarKPIs();
 
-// MODAL SOBRE
+// ===== MODAL SOBRE (CORRIGIDO) =====
 const btnAbout = document.getElementById("btnAbout");
 const aboutModal = document.getElementById("aboutModal");
 const btnCloseAbout = document.getElementById("btnCloseAbout");
 
-btnAbout.onclick = () => {
+// Abrir modal
+btnAbout.addEventListener("click", () => {
   aboutModal.classList.remove("hidden");
-};
+});
 
-btnCloseAbout.onclick = () => {
+// Fechar modal (botão)
+btnCloseAbout.addEventListener("click", () => {
   aboutModal.classList.add("hidden");
-};
+});
+
+// Fechar modal clicando fora do card
+aboutModal.addEventListener("click", (e) => {
+  if (e.target === aboutModal) {
+    aboutModal.classList.add("hidden");
+  }
+});
+
+// Fechar modal com ESC
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    aboutModal.classList.add("hidden");
+  }
+});
+
 
