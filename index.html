@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Painel Suporte TI</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -13,7 +12,9 @@
   <!-- TOPO -->
   <header class="topbar">
     <div class="brand">Suporte TI</div>
-    <div>
+
+    <div class="top-actions">
+      <button id="btnAbout" class="btn secondary small-btn">Sobre</button>
       <span id="userEmail"></span>
       <button id="btnLogout" class="btn secondary hidden">Sair</button>
     </div>
@@ -24,40 +25,17 @@
 
     <!-- LOGIN -->
     <section id="loginView" class="card login-card">
-
-      <!-- ÍCONE / LOGO -->
-      <div class="login-logo">
-        🛠️
-      </div>
-
+      <div class="login-logo">🛠️</div>
       <h2>Suporte TI</h2>
       <p class="muted">Acesse o painel de controle</p>
 
       <form id="loginForm">
-        <input
-          id="email"
-          type="email"
-          placeholder="E-mail"
-          required
-        />
-
-        <input
-          id="password"
-          type="password"
-          placeholder="Senha"
-          required
-        />
-
-        <button class="btn" type="submit">
-          Entrar
-        </button>
+        <input id="email" type="email" placeholder="E-mail" required />
+        <input id="password" type="password" placeholder="Senha" required />
+        <button class="btn" type="submit">Entrar</button>
       </form>
 
-      <button
-        id="btnCreateUser"
-        class="btn secondary"
-        style="margin-top:12px"
-      >
+      <button id="btnCreateUser" class="btn secondary" style="margin-top:12px">
         Criar usuário
       </button>
 
@@ -70,7 +48,6 @@
       <h2>Dashboard</h2>
 
       <div class="grid">
-
         <div class="card">
           <div class="muted">Ativos</div>
           <strong id="kpiAtivos">0</strong>
@@ -85,12 +62,43 @@
           <div class="muted">Vencimentos</div>
           <strong id="kpiVenc">0</strong>
         </div>
-
       </div>
 
     </section>
 
   </main>
+
+  <!-- RODAPÉ COM VERSÃO -->
+  <footer class="footer">
+    Sistema de Suporte de TI • Versão <strong>v1.0.0</strong>
+  </footer>
+
+  <!-- MODAL SOBRE -->
+  <div id="aboutModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Sobre o Sistema</h3>
+
+      <p>
+        <strong>Sistema:</strong> Painel de Suporte de TI<br>
+        <strong>Versão:</strong> v1.0.0
+      </p>
+
+      <p class="muted">
+        Sistema web para controle de ativos, acessos, vencimentos
+        e informações de suporte de TI.
+      </p>
+
+      <p class="muted small">
+        Tecnologias utilizadas:<br>
+        • HTML, CSS e JavaScript<br>
+        • Firebase Authentication<br>
+        • Firestore Database<br>
+        • GitHub Pages
+      </p>
+
+      <button id="btnCloseAbout" class="btn">Fechar</button>
+    </div>
+  </div>
 
   <!-- SCRIPTS -->
   <script type="module" src="js/firebase.js"></script>
