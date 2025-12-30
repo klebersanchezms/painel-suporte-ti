@@ -1,54 +1,161 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: white;
-  margin: 0;
+:root {
+  --bg: #0f172a;
+  --card: #020617;
+  --primary: #6366f1;
+  --secondary: #334155;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: #1e293b;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* TOPO */
 .topbar {
-  padding: 10px 20px;
-  background: #020617;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(2, 6, 23, 0.9);
+  border-bottom: 1px solid var(--border);
 }
 
+.brand {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.topbar button {
+  width: auto;
+  padding: 8px 16px;
+}
+
+/* CONTAINER CENTRAL */
 .container {
-  max-width: 800px;
-  margin: 40px auto;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 16px;
 }
 
+/* CARDS */
 .card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  margin-bottom: 24px;
+}
+
+/* LOGIN */
+#loginView {
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#loginView h2 {
+  margin-bottom: 8px;
+}
+
+#loginView p {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
   background: #020617;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 8px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* BOTÕES */
+.btn {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.btn:hover {
+  opacity: .9;
+}
+
+.secondary {
+  background: var(--secondary);
+}
+
+/* DASHBOARD */
+#appView h2 {
+  margin-bottom: 24px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+/* KPIs */
+.grid .card {
+  text-align: center;
 }
 
-.btn {
-  padding: 10px;
-  background: #6366f1;
-  color: white;
-  border: none;
-  cursor: pointer;
-  width: 100%;
+.grid strong {
+  display: block;
+  font-size: 32px;
+  margin-top: 8px;
+  color: var(--primary);
 }
 
-.secondary {
-  background: #334155;
-}
-
+/* UTIL */
 .hidden {
   display: none;
+}
+
+#userEmail {
+  margin-right: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .container {
+    margin: 30px auto;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
